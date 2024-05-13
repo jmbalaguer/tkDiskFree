@@ -18,6 +18,7 @@ def label_update_loop():
 
 # Create main window.
 wndMain = tk.Tk()
+wndMain.title("df") 
 
 # Set the size of the tkinter main window.
 wndMain.geometry("180x50")
