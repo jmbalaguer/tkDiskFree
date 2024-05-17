@@ -1,36 +1,36 @@
-import tkinter as tk 
 import time, shutil
+import tkinter as tk # Use the tkinter GUI
 
 KB = 1024
 MB = 1024 * KB
 GB = 1024 * MB
-FILESYS = "/media/jsmith/Vol250GB/" 
+FSPATH = "/media/jsmith/Vol250GB/" 
 
-def label_update_loop():
+def label_update():
   while True:
-    # Update tk.StringVar with available disk space
-    df = shutil.disk_usage(FILESYS).free / GB
-    dftxt.set("%.2f"%df + " GB")
+    # Update tk.StringVar with the available disk space
+    df = shutil.disk_usage(FSPATH).free / GB
+    dftxt.set("%.2f GB" % df)
     wndMain.update()
-    # Sleep until next update
+    # Relinquish the CPU for some seconds.
     time.sleep(2)
 
 
-# Create main window.
+# Create the main window.
 wndMain = tk.Tk()
-wndMain.title("df") 
 
-# Set the size of the tkinter main window.
+# Set title and size of the main window.
+wndMain.title("df") 
 wndMain.geometry("180x50")
 
-# Initialize a tkinter StringVar
+# Define a tkinter StringVar to use in a label.
 dftxt = tk.StringVar()
 
-# Create label widgets
-label1 = tk.Label(wndMain, text=FILESYS, font='Arial 10')
-label2 = tk.Label(wndMain, textvariable=dftxt, font='Arial 17 bold')
+# Create the text labels.
+label1 = tk.Label(wndMain, text=FSPATH, font="Arial 10")
+label2 = tk.Label(wndMain, textvariable=dftxt, font="Arial 17 bold")
 label1.pack(pady=0)
 label2.pack(pady=2)
 
-label_update_loop()
-wndMain.mainloop()
+label_update()
+wndMain.mainloop() 
