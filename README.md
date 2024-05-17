@@ -5,7 +5,7 @@ on Xfce4 Desktop Environment:
 
 ![tkDiskFree](https://github.com/jmbalaguer/tkDiskFree/blob/main/tkDiskFree(Xfce4).png?raw=true) 
 
-on CDE Desktop Environmen:
+on CDE Desktop Environment:
 
 ![tkDiskFree](https://github.com/jmbalaguer/tkDiskFree/blob/main/tkDiskFree(CDE).png?raw=true)
 
