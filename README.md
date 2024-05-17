@@ -1,5 +1,5 @@
 # tkDiskFree
-Simple Linux desktop utility to check for free disk space at regular intervals, using the tkinter GUI interface.
+Simple Linux desktop utility to check for free disk space at regular intervals, written in Python using the tkinter GUI interface.
 
 
 On Xfce4 Desktop Environment:
